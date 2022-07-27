@@ -43,6 +43,7 @@
       width: 50px;;
       height: 50px;
       margin: 10px;
+      background-color: bisque;
     }
 
     main{
@@ -64,6 +65,7 @@
 
 
   .section-img{
+    background-color: aquamarine;
     background: url(../img/판다.jpg) no-repeat;
     background-size: cover;
   }
@@ -82,7 +84,7 @@
   .h1-position{
     position:relative;
     top: 35%;
-    left:45%
+    left:45%;
   }
 
 /* 위치 이동 시킬 때 씀. relative는 상대적 위치 이동. 기준은 자기 자신 일 수도 있고 부모일 수도 있음 */
@@ -91,9 +93,50 @@
   width: 60px;
   height: 40px;
   cursor: pointer;
+  position:relative;
+  top:40%;
+  left:50%;
+  padding-top: 5px;
+  text-align: center;
 }
 
+/* 클래스 하나에 이렇게 많이 들어가도 되나? */
+/* 아니면 나눠서 한 태그에 클래스를 여러개 넣어야하나? */
+/* div에 링크 걸어주면서 cursor:pointer;해주면 커서 모양이 바뀜 */
 
+.section-flex{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.div-flex{
+  margin:20px 100px 20px 100px;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h2-div{
+  width:400px;
+  height: 250px;
+  background-color: rgb(204, 177, 229);
+}
+
+.div-size2{
+  width: 150px;
+  height: 100px;
+  background-color: palegreen;
+}
+
+.div-size3{
+  width: 180px;
+  height: 230px;
+  margin-left: 100px;
+  background-color: rgb(181, 190, 227);
+}
 
   </style>
 
@@ -116,14 +159,17 @@
     </header>
     <main>
       <section class="section-img">
-        <h1 class="h1-size h1-position">이것은 글씨</h1>
-        <div onclick="location.herf='https://www.google.com'" class="link-div">눌러요</div>
+        <h1 class="h1-size h1-position">나는 h1</h1>
+        <div onclick="location.href='http://www.google.com'" class="link-div">눌러요</div>
+        <!-- a링크 대신 div에 onclick으로 링크 직접 걸어줌. 근데 onclick은 자바스크립트인가? -->
       </section>
-      <section>
-        <h2></h2>
-        <div></div>
-        <div></div>
-        <div></div>
+      <section class="section-flex">
+        <div class="div-flex">
+          <h2>나는 h2</h2>
+          <div class="h2-div"></div>
+        </div>
+        <div class="div-size2"></div>
+        <div class="div-size3"></div>
       </section>
       <section>
         <h2></h2>
