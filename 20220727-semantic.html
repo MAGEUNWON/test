@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      border:1px solid red;
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+    }
+
+    
+    body{
+      width: 100vw;
+      height: 100vh;
+      
+    }
+
+    body > div{
+      width: 100vw;
+      height: 100vh;
+      
+    }
+
+    header, nav{
+      width: 100vw;
+      height: 10vh;
+    }
+    /* border-box했는데 왜 body빼고 나머지는 다 넘어갈까? */
+    /* -> html 기준 선으로 봐서 헷갈림 전체에 선 넣어줘서 그런듯*/
+
+    .ul-display{
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+    }  
+    
+    li{
+      width: 50px;;
+      height: 50px;
+      margin: 10px;
+    }
+
+    main{
+      width: 100vw;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    section{
+      width: 100vw;
+      height: 300px;
+    }
+
+    /* main이 container가 되고 section이 itmes가 되는 flex */
+    /* main안에 section들을 딱 맞춰서 넣을 수 있음 */
+
+
+  .section-img{
+    background: url(../img/판다.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  /* no-repeat 해줘야 반복 안됨, background-size: cover; 해주면 이미지 가로세로 비율 유지하면서 출력 영역 꽉 채움. 경로 2번 이상 가니까 사진 안나옴 */
+
+  
+  .h1-size{
+    width: 200px;
+    height: 50px;
+    padding-top:10px;
+    text-align: center;
+  }
+
+
+  .h1-position{
+    position:relative;
+    top: 35%;
+    left:45%
+  }
+
+/* 위치 이동 시킬 때 씀. relative는 상대적 위치 이동. 기준은 자기 자신 일 수도 있고 부모일 수도 있음 */
+
+.link-div{
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+
+
+
+  </style>
+
+
+
+
+
+</head>
+<body>
+  <div>
+    <header>
+      <nav>
+        <div>
+          <ul class="ul-display">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="section-img">
+        <h1 class="h1-size h1-position">이것은 글씨</h1>
+        <div onclick="location.herf='https://www.google.com'" class="link-div">눌러요</div>
+      </section>
+      <section>
+        <h2></h2>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+      <section>
+        <h2></h2>
+        <div></div>
+        <div></div>
+      </section>
+      <section>
+        <h2></h2>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
