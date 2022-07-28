@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      border:1px solid red;
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+    }
+
+    
+    body{
+      width: 100vw;
+      height: 100vh;
+      
+    }
+
+    body > div{
+      width: 100vw;
+      height: 100vh;
+      
+    }
+
+    header, nav{
+      width: 100vw;
+      height: 10vh;
+    }
+    /* border-box했는데 왜 body빼고 나머지는 다 넘어갈까? */
+    /* -> html 기준 선으로 봐서 헷갈림 전체에 선 넣어줘서 그런듯*/
+
+    .ul-display{
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+    }  
+    
+    li{
+      width: 50px;;
+      height: 50px;
+      margin: 10px;
+      background-color: bisque;
+    }
+
+    main{
+      width: 100vw;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    section{
+      width: 100vw;
+      height: 300px;
+    }
+
+    /* main이 container가 되고 section이 itmes가 되는 flex */
+    /* main안에 section들을 딱 맞춰서 넣을 수 있음 */
+
+
+  .section-img{
+    background-color: aquamarine;
+    background: url(../img/달.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  /* no-repeat 해줘야 반복 안됨, background-size: cover; 해주면 이미지 가로세로 비율 유지하면서 출력 영역 꽉 채움. 경로 2번 이상 가니까 사진 안나옴 */
+
+  
+  .h1-size{
+    width: 200px;
+    height: 50px;
+    padding-top:10px;
+    text-align: center;
+  }
+
+
+  .h1-position{
+    position:relative;
+    top: 35%;
+    left:45%;
+  }
+
+/* 위치 이동 시킬 때 씀. relative는 상대적 위치 이동. 기준은 자기 자신 일 수도 있고 부모일 수도 있음. position보다 최대한 flex 등으로 위치 정렬 해주는 것이 좋음. position은 제일 마지막에 display로 안될 때 쓸 것*/
+
+.link-div{
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  position:relative;
+  top:40%;
+  left:50%;
+  padding-top: 5px;
+  text-align: center;
+}
+
+/* 클래스 하나에 이렇게 많이 들어가도 되나? */
+/* 아니면 나눠서 한 태그에 클래스를 여러개 넣어야하나? */
+/* div에 링크 걸어주면서 cursor:pointer;해주면 커서 모양이 바뀜 */
+
+.section2-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+/* flex 안에 item들 위치 이동 시킬 때 마진, 패딩 주지 말고 일단 space-round로 균등하게 배치 먼저 하고 그 다음에 position으로 세세한 이동 하기 */
+
+
+.div-flex{
+  /* margin:20px 100px 20px 100px; */
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h2-div{
+  width:400px;
+  height: 250px;
+  background-color: rgb(204, 177, 229);
+}
+
+.div-size2{
+  width: 150px;
+  height: 100px;
+  /* margin-top: 20px; */
+  background-color: palegreen;
+}
+
+.div-size3{
+  width: 180px;
+  height: 230px;
+  /* margin-left: 100px;
+  margin-top: 20px; */
+  background-color: rgb(181, 190, 227);
+  }
+
+  /* 클래스 이름 짓는게 너무 어렵다... 많아지니까 헷갈림 */
+  /* 이름은 나 말고 다른 사람도 알아보게 지어야 하나? ->이름 길어도 되고 속성을 자세하게 써주는게 알아보기 편함, 한 클래스에 너무 많이 넣지 말고 짧게 여러 클래스 만드는게 좋음. 태그에 클래스 많이 들어가도 됨 */
+
+.section3-flex{
+  display: flex;
+  /* flex-direction: row;  원래 초기값이 row여서 굳이 안줘도 이렇게 나옴*/
+  justify-content: space-around;
+
+}
+
+.section3-div-flex{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 250px;
+  /* margin-left: 200px; */
+}
+
+.section3-div2-flex{
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 220px;
+  margin-left: 20px;
+  
+}
+
+
+.section3-div2-div-size{
+  width: 160px;
+  height: 190px;
+  background-color: rgb(240, 191, 191);
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 7px;
+}
+
+.text-align-center{
+  text-align: center;
+}
+
+.div-size-300{
+  width: 300px;
+  height: 220px;
+}
+
+.div-size-350{
+  width: 350px;
+  height: 350px;
+}
+
+.colum-count2{
+  column-count: 2;
+}
+/* div에 colum-count갯수 정해주면 다단 나눠서 쓸 수 있음. p태그로 안해도 됨 */
+.colum-width{
+  column-width: 32px;
+}
+
+.colum-padding{
+  padding:7px 10px 5px 7px;
+}
+
+.img-size{
+  width: 100px;
+  height: 80px;
+}
+
+.img-size-200-150{
+  width: 200px;
+  height: 150px;
+}
+
+.div-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.flex-space-around{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.img-size-200-280{
+  width: 200px;
+  height: 280px;
+}
+
+.font-size{
+  font-size: 5px;
+}
+
+.div-flex-align{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-img-size{
+  width: 30px;
+  height: 25px;
+}
+
+  </style>
+
+
+
+
+
+</head>
+<body>
+  <div>
+    <header>
+      <nav>
+        <div>
+          <ul class="ul-display">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="section-img">
+        <h1 class="h1-size h1-position">나는 h1</h1>
+        <div onclick="location.href='http://www.google.com'" class="link-div">눌러요</div>
+        <!-- a링크 대신 div에 onclick으로 링크 직접 걸어줌. 근데 onclick은 자바스크립트인가? -->
+      </section>
+      <section class="section2-flex">
+        <div class="div-flex">
+          <h2>나는 h2</h2>
+          <div class="h2-div"></div>
+        </div>
+        <div class="div-size2"></div>
+        <div class="div-size3"></div>
+      </section>
+      <section class="section3-flex">
+        <div class="section3-div-flex">
+          <h2 class="text-align-center">나는 h2</h2>
+          <div class="section3-div2-flex">
+            <div class="section3-div2-div-size"></div>
+            <div class="section3-div2-div-size"></div>
+          </div>
+        </div>
+        <div class="div-size-300">
+          <h2 class="text-align-center">나는 h2</h2>
+          <div class="colum-count2 colum-width colum-padding">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세. 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세. </div>
+          <img src="../img/파란색.png" alt="파란색" class="img-size">
+          <!-- 이 때 이미지만 조금 오른쪽으로 옮기고 싶으면 position쓰면 됨 -->
+          </div>
+      </section>
+
+      <section class="flex-space-around">
+        <div class="div-size-350 div-flex">
+          <h3 class="text-align-center">이건 h3</h3>
+          <img src="../img/라이언.png" alt="라이언안녕" class="img-size-200-150">
+        </div>
+        <img src="../img/곰돌이.png" alt="곰돌이안녕" class="img-size-200-280">
+        <div class="div-flex-align">
+          <p class="font-size colum-padding">산할아버지 구름모자 썼네<br>
+          나비같이 훨훨 날아서 살금살금 다가와서<br>
+          구름모자 벗겨오지. </p>
+          <a href="https://www.youtube.com/watch?v=kcTvNUnHkAE">
+            <img src="../img/재생아이콘.png" alt="재생" class="link-img-size">
+          </a>
+          <img src="../img/산할아버지.jpg" alt="산할아버지" class="img-size-200-150">
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
