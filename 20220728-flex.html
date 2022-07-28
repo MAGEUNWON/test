@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+      border:1px solid black;
+      box-sizing: border-box;
+    }
+
+    body{
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .dp-flex{
+      display: flex;
+    }
+
+    .fd-column{
+      flex-direction: column;
+    }
+
+      .align-center{
+      align-items: center;
+    }
+
+    .justify-around{
+      justify-content: space-around
+    }
+
+    .align-around{
+      align-content: space-around;
+    }
+
+    .div-size-400-800{
+      width: 400px;
+      height: 800px;
+    }
+
+    .div-size-350-300{
+      width: 350px;
+      height: 300px;
+    }
+
+    .div-size-200-250{
+      width: 200px;
+      height: 250px;
+    }
+
+    .div-size-380-100{
+      width: 380px;
+      height: 100px;
+    }
+
+    .div-size-400-300{
+      width: 400px;
+      height: 300px;
+    }
+
+    .div-size-380-150{
+      width:380px;
+      height: 150px;
+
+    }
+    .div-size-100-100{
+      width: 90px;
+      height: 90px;
+    }
+
+  </style>
+</head>
+<body class="dp-flex justify-around align-center">
+  <div class="div-size-400-800 dp-flex fd-column justify-around">
+    <div class="div-size-350-300"></div>
+    <div class="div-size-200-250"></div>
+    <div class="div-size-380-100"></div>
+  </div>
+  <div class="div-size-400-800 dp-flex fd-column justify-around">
+    <div class="div-size-400-300"></div>
+    <div class="div-size-380-150 dp-flex justify-around align-center">
+      <div class="div-size-100-100"></div>
+      <div class="div-size-100-100"></div>
+      <div class="div-size-100-100"></div>
+    </div>
+  </div>
+</body>
+</html>
