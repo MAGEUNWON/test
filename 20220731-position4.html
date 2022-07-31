@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    header{
+      width: 100vw;
+      height: 50px;
+      background-color: coral;
+      position: fixed;
+      top:0px;
+    }
+
+    
+    .relative{
+      width: 400px;
+      height: 400px;
+      background-color: crimson;
+      position: relative;
+      top: 50px;
+    }
+
+    .absolute{
+      width: 400px;
+      height: 400px;
+      background-color: steelblue;
+      position:absolute;
+      top:200px;
+      left:250px;
+    }
+
+    .sticky{
+      width: 300px;
+      height: 300px;
+      background-color: violet;
+      position: sticky;
+      top:30px;
+      left:800px;
+
+    }
+
+    .fixed2{
+      width: 50px;
+      height: 50px;
+      background-color: yellowgreen;
+      position: fixed;
+      left: 900px;
+      bottom:0px;
+    }
+
+    /* 화면 크기에 맞게 고정하려면 left 단위를 뭐로 해야하지? */
+
+    .div{
+      width: 500px;
+      height: 500px;
+      background-color: darkcyan;
+    }
+
+  </style>
+</head>
+<body>
+  <header>fixed</header>
+  <div class="relative">relative</div>
+  <div class="absolute">absolute</div>
+  <div class="sticky">stick</div>
+  <div class="fixed2">fiexed</div>
+  <div class="div"></div>
+  <div class="div"></div>
+  <div class="div"></div>
+</body>
+</html>
