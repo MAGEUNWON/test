@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      width: 100vw;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body>div{
+      width: 150px;
+      height:400px;
+      background-color: bisque;
+    }
+
+    body>div:nth-child(2){
+      background-color: cadetblue;
+    }
+
+    /* body>div:nth-child(4){
+      width: 300px;
+      height: 200px;
+      border: 3px solid black;
+      box-sizing: border-box;
+    } */
+
+    body>div>div:nth-child(1){
+      width: inherit;
+      height: 90px;
+      background-color: violet;
+    }
+    
+    body>div:nth-child(2)>div:nth-child(1){
+      width: 150px;
+      height: 50px;
+      background-color: rgb(172, 172, 230);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 작은 div들 */
+    body>div:nth-child(2)>div:nth-child(1)>div{
+      width: 25px;
+      height: 35px;
+      background-color: chartreuse;
+    }
+
+    body>div:nth-child(3){
+      display: flex;
+      justify-content: center;
+      align-items:flex-end;
+    }
+
+    body>div:nth-child(3)>div:nth-child(1){
+      width: inherit;
+      height: 90px;
+      background-color: violet;
+      
+    }
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <div>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <h2>hello</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore asperiores impedit velit expedita sequi nihil, eos optio ducimus incidunt dolores? Molestias possimus, labore laudantium maxime rerum harum nemo ipsam.</p>
+    </div>
+  </div>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <!-- <div></div> -->
+</body>
+</html>
+
+<!-- 얘처럼 일단 크게 세 덩이로 묶어서 틀에 두고 시작하면 한번에 제어하기 편하고 반응형일 때 변화가 없음. 하지만 낱개로 하나하나 세밀한 조정을 하기는 어려움. -->

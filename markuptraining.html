@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div-size{
+      width: 200px;
+      height: 100px;
+      background-color: gray;
+    }
+
+    .div-size2{
+      width: 200px;
+      height: 350px;
+      background-color: rgb(224, 220, 220);
+    }
+
+    .div-size3{
+      width: 250px;
+      height: 50px;
+      background-color: rgb(161, 160, 160);
+    }
+    
+    .div-size4{
+      width: 30px;
+      height: 30px;
+      background-color: rgb(231, 225, 225);
+    }
+    
+    .div-size5{
+      width: 600px;
+      height: 250px;
+      border: 3px solid black;
+      box-sizing: border-box;
+    }
+    
+    /* .div-size6{
+      width: 600px;
+      height: 500px;
+      border: 1px solid rebeccapurple;
+      box-sizing: border-box;
+    } */
+    
+    .flex{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      
+
+    }
+
+    .flex2{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    
+
+    .absolute{
+      position: absolute;
+      top:40px;
+      left:500px;
+    }
+
+    .absolute2{
+      position: absolute;
+      top:40px;
+      left:750px;
+
+    }
+    
+    .absolute3{
+      position: absolute;
+      top:290px;
+      left:1000px;
+    }
+
+    .absolute4{
+      position: absolute;
+      top:80px;
+      left: 800px;
+    }
+
+    .absolute5{
+      position: absolute;
+      top:105px;
+      left:530px;
+    }
+
+    .font{
+      font-size: 10px;
+    }
+
+    .h1-position{
+      position: relative;
+      top: 150px;
+      left: 10px;
+    }
+
+    .p-position{
+      position: relative;
+      top:130px;
+      left: 10px;
+    }
+
+    /* .bg-img{
+      background-image: url(../scss/img/다운로드.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100vw;
+      height: 100vh;
+      
+    } */
+
+
+  </style>
+</head>
+<body class="bg-img">
+  <!-- 블러처리 하면 div들도 다 흐려짐. 배경만 어떻게 블러처리 하지? -->
+  <div class="flex">
+    <div class="div-size absolute"></div>
+    <div class="div-size2 absolute2">
+      <h1 class="h1-position">hello</h1>
+      <p class="p-position font">ehdgoanfrhk qorentksdl akfmrh ekfgehfhr gksmsladl qhdngktk dnflskfkakstp anrndghk anrndghk tkacjsfl ghkfurkdtkseogksektkf eogksdmfh rlfdlqhwjsgktp</p>
+      <!-- h1과 p위치 조정은 div로 묶어서 flex를 먼저 해야하나? 아님 그냥 position으로 각각 하면 되나? -->
+    </div>  
+    <div class="div-size absolute3"></div>  
+  </div>
+  <!-- 큰 div3개도 일단 flex로 묵어서 가운데 정렬하고 그 뒤에 position으로 위치 조정 -->
+  <div class="div-size3 flex2 absolute4">
+    <div class="div-size4"></div>
+    <div class="div-size4"></div>
+    <div class="div-size4"></div>
+    <div class="div-size4"></div>
+    <div class="div-size4"></div>
+  </div>
+  <div class="div-size5 absolute5"></div>
+    
+
+</body>
+</html>
+
+<!-- 얘처럼 하나하나 낱개로 구조를 짜고 디자인을 하면 각각을 세밀하게 조정할 수 있는 장점이 있음. 9position을 통해서). 하지만 반응형일때는 다 무너질 수 있다는 단점이 있음. -->
